@@ -16,7 +16,7 @@ require('dotenv').config();
 // }));
 
 app.use(cors({
-    origin: ['http://localhost:3000', 'https://react-frontend-rosy.vercel.app'], // Allow both local and Vercel frontends
+    origin:"*", // Allow both local and Vercel frontends
     credentials: true,  // Allow cookies and credentials
 }));
 
