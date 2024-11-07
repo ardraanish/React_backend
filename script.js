@@ -12,7 +12,9 @@ require('dotenv').config();
 
 app.use(cors({
     origin: 'https://react-frontend-rosy.vercel.app', // Frontend URL
-    credentials: true,               // Allow cookies and credentials
+    credentials: true,  
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],// Allow cookies and credentials
 }));
 
 app.use(express.json());
