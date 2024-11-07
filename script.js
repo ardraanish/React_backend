@@ -10,9 +10,14 @@ require('dotenv').config();
 
 // app.use(cors()); // Moved this to the top to ensure it applies to all routes
 
+// app.use(cors({
+//     origin: 'http://localhost:3000', // Frontend URL
+//     credentials: true,               // Allow cookies and credentials
+// }));
+
 app.use(cors({
-    origin: 'http://localhost:3000', // Frontend URL
-    credentials: true,               // Allow cookies and credentials
+    origin: ['http://localhost:3000', 'https://react-frontend-rosy.vercel.app'], // Allow both local and Vercel frontends
+    credentials: true,  // Allow cookies and credentials
 }));
 
 app.use(express.json());
